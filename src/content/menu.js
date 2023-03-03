@@ -1,4 +1,6 @@
 export function setAsMenu() {
+    start();
+    
     addElementToMain("dragon-roll.jpg", "Dragon Roll Sushi", "Dragon Roll Sushi", "Panko prawn and cucumber roll with grilled eel top and Teriyaki, sweet spicy sauce and ginger.");
     addElementToMain("cucumb-avacado-maki.jpg", "Cucumber Avacado Maki", "Cucumber Avacado Maki", "Sushi roll with avocado cucumber and sesame.");
     addElementToMain("salmon-maki.jpg", "California Maki", "California Maki", "Sushi roll with crabmeat, avocado, cucumber and tobiko.");
@@ -9,8 +11,16 @@ export function setAsMenu() {
     addElementToMain("tuna-roll.jpg", "Tuna Delight Roll Box", "Tune Delight Roll Box", "Red cabbage, avo cucumber roll, topped with fresh salmon, wasabi mayo, furikage and tobiko.");
 }
 
+function start() {
+    const mainEl = document.querySelector("main");
+    const products = document.createElement("div");
+    products.classList.add("products-container")
+    mainEl.appendChild(products);
+}
+
 function addElementToMain(imgSrc, imgAlt, productName, productDescription) {
     const mainEl = document.querySelector("main");
+    const products = document.querySelector(".products-container");
     const productContainer = document.createElement("div");
     productContainer.classList.add("product");
 
@@ -26,5 +36,6 @@ function addElementToMain(imgSrc, imgAlt, productName, productDescription) {
     productDescEl.textContent = productDescription;
 
     productContainer.append(productImgEl, productNameEl, productDescEl);
-    mainEl.appendChild(productContainer);
+    products.appendChild(productContainer);
+    mainEl.appendChild(products);
 }

@@ -63,3 +63,27 @@ main > .home-container {
     object-fit: cover;
     margin: 1rem 0;
 }
+
+.product {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "img title"
+        "img desc";
+}
+
+.product > img {
+    grid-area: img;
+    max-width: 100%;
+}
+
+.product > p:first-of-type {
+    grid-area: title;
+    align-self: self-end;
+}
+
+.product > p:last-of-type {
+    font-size: 0.8rem;
+    grid-area: desc;
+}
