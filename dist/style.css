@@ -2,4 +2,39 @@
 
 :root {
     font-family: Roberto, sans-serif;
+    --container: #30323D;
+    --text: #CDD1C4;
+    --stand-out: #E8C547;
+    color: var(--text);
+}
+
+header {
+    background-color: var(--container);
+    text-align: center;
+    padding-top: 1rem;
+    box-shadow: 1px 3px 4px 1px var(--container);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+nav > button {
+    font-size: 1.5rem;
+    background-color: inherit;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+button.selected {
+    text-decoration: underline var(--stand-out);
 }
