@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/content/contact.js":
+/*!********************************!*\
+  !*** ./src/content/contact.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"setAsContact\": () => (/* binding */ setAsContact)\n/* harmony export */ });\nfunction setAsContact() {\n    const container = document.getElementById(\"content\")\n    const mainEl = document.querySelector(\"main\");\n\n    const contactContainer = document.createElement(\"div\");\n    contactContainer.classList.add(\"contact\");\n\n    const telephone = document.createElement(\"p\");\n    telephone.textContent = \"07123456789\";\n\n    const address = document.createElement(\"p\");\n    address.textContent = \"Buckingham Palace, London SW1A 1AA\";\n\n    const map = document.createElement(\"img\");\n    map.src = \"assets/map.png\";\n    map.alt = \"A map of where Dragon Roll is located.\"   \n    \n    contactContainer.append(telephone, address, map);\n    mainEl.appendChild(contactContainer);\n    container.appendChild(mainEl);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/content/contact.js?");
+
+/***/ }),
+
 /***/ "./src/content/home.js":
 /*!*****************************!*\
   !*** ./src/content/home.js ***!
@@ -56,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hea
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createBody\": () => (/* binding */ createBody)\n/* harmony export */ });\n/* harmony import */ var _content_home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content/home.js */ \"./src/content/home.js\");\n/* harmony import */ var _content_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./content/menu.js */ \"./src/content/menu.js\");\n\n\n\nfunction createBody() {\n    const container = document.getElementById(\"content\");\n    const mainEl = document.createElement(\"main\");\n    container.appendChild(mainEl);\n    (0,_content_menu_js__WEBPACK_IMPORTED_MODULE_1__.setAsMenu)();\n}\n\n//# sourceURL=webpack://restaurant-page/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createBody\": () => (/* binding */ createBody)\n/* harmony export */ });\n/* harmony import */ var _content_home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content/home.js */ \"./src/content/home.js\");\n/* harmony import */ var _content_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./content/menu.js */ \"./src/content/menu.js\");\n/* harmony import */ var _content_contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./content/contact.js */ \"./src/content/contact.js\");\n\n\n\n\nfunction createBody() {\n    const container = document.getElementById(\"content\");\n    const mainEl = document.createElement(\"main\");\n    container.appendChild(mainEl);\n    (0,_content_contact_js__WEBPACK_IMPORTED_MODULE_2__.setAsContact)();\n}\n\n//# sourceURL=webpack://restaurant-page/./src/main.js?");
 
 /***/ })
 
