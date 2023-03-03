@@ -38,3 +38,28 @@ nav > button {
 button#selected {
     text-decoration: underline var(--stand-out);
 }
+
+#content > main {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: var(--container);
+    opacity: 95%;
+}
+
+main > .home-container {
+    padding: 3rem 2rem;
+}
+
+.home-container > p:first-of-type {
+    margin-bottom: .25rem;
+}
+
+.home-container > .home-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1rem 0;
+}
