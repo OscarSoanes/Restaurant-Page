@@ -1,4 +1,4 @@
-export function createHeading(index) {
+function createHeading(index) {
     const container = document.getElementById("content");
     const headerEl = document.createElement("header");
     const logo = document.createElement("h1");
@@ -12,9 +12,9 @@ export function createHeading(index) {
         button.type = "button";
         button.classList.add("nav-button");
         button.textContent = element;
-        
-        if (navbarTextEl[index] == element) {
-            button.classList.add("selected");
+
+        if (index === element) {
+            button.setAttribute("id", "selected");
         }
 
         navbar.appendChild(button);
@@ -23,3 +23,18 @@ export function createHeading(index) {
     headerEl.append(logo, navbar);
     container.appendChild(headerEl);
 }
+
+function changeHeading (nav2Text) {
+    const selected = document.getElementById("selected");
+    const changeTo = document.querySelectorAll(".nav-button");
+
+    changeTo.forEach(element => {
+        console.log(nav2Text, element.textContent);
+        if (element.textContent === nav2Text) {
+            selected.removeAttribute("id");
+            element.setAttribute("id", "selected");
+        }
+    })
+}
+
+export {createHeading, changeHeading};

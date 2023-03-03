@@ -1,4 +1,10 @@
-import '../dist/style.css';
-import {createHeading} from './heading.js';
+import {createHeading, changeHeading} from './heading.js';
 
-createHeading(0)
+let currentHeading = "Home"
+createHeading(currentHeading)
+
+const navBarButtons = document.querySelectorAll(".nav-button")
+navBarButtons.forEach(button => button.addEventListener('click', () => {
+    changeHeading(button.textContent);
+    currentHeading = button.textContent;
+}))
