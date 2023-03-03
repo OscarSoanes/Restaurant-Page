@@ -10,6 +10,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/content/home.js":
+/*!*****************************!*\
+  !*** ./src/content/home.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"setAsHome\": () => (/* binding */ setAsHome)\n/* harmony export */ });\nfunction setAsHome() {\n    const container = document.getElementById(\"content\")\n    const mainEl = document.querySelector(\"main\");\n    const slogan = document.createElement(\"p\");\n    slogan.textContent = \"Fresh fish, expertly rolled\";\n\n    const date = document.createElement(\"p\");\n    date.textContent = \"Established in 2023\";\n\n    const img = document.createElement(\"img\");\n    img.src = \"assets/home-sushi.jpg\";\n    img.alt = \"Sushi\";\n\n    const orderMsg = document.createElement(\"p\");\n    orderMsg.textContent = \"Order online or visit us!\"\n\n    mainEl.append(slogan, date, img, orderMsg)\n    container.appendChild(mainEl);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/content/home.js?");
+
+/***/ }),
+
+/***/ "./src/content/menu.js":
+/*!*****************************!*\
+  !*** ./src/content/menu.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"setAsMenu\": () => (/* binding */ setAsMenu)\n/* harmony export */ });\nfunction setAsMenu() {\n    addElementToMain(\"dragon-roll.jpg\", \"Dragon Roll Sushi\", \"Dragon Roll Sushi\", \"Panko prawn and cucumber roll with grilled eel top and Teriyaki, sweet spicy sauce and ginger.\");\n    addElementToMain(\"cucumb-avacado-maki.jpg\", \"Cucumber Avacado Maki\", \"Cucumber Avacado Maki\", \"Sushi roll with avocado cucumber and sesame.\")\n}\n\nfunction addElementToMain(imgSrc, imgAlt, productName, productDescription) {\n    const mainEl = document.querySelector(\"main\");\n    const productContainer = document.createElement(\"div\");\n    productContainer.classList.add(\"product\");\n\n    const productImgEl = document.createElement(\"img\");\n    const productNameEl = document.createElement(\"p\");\n    const productDescEl = document.createElement(\"p\");\n    productDescEl.classList.add(\"small\");\n\n    productImgEl.src = `assets/${imgSrc}`;\n    productImgEl.alt = imgAlt;\n\n    productNameEl.textContent = productName;\n    productDescEl.textContent = productDescription;\n\n    productContainer.append(productImgEl, productNameEl, productDescEl);\n    mainEl.appendChild(productContainer);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/content/menu.js?");
+
+/***/ }),
+
 /***/ "./src/heading.js":
 /*!************************!*\
   !*** ./src/heading.js ***!
@@ -36,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hea
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createBody\": () => (/* binding */ createBody)\n/* harmony export */ });\n// import Sushi from './home-sushi.jpg'\n\nfunction createBody() {\n    const container = document.getElementById(\"content\");\n    const mainEl = document.createElement(\"main\");\n    container.appendChild(mainEl);\n    setAsMenu();\n}\n\nfunction setAsHome() {    \n    const mainEl = document.querySelector(\"main\");\n    const slogan = document.createElement(\"p\");\n    slogan.textContent = \"Fresh fish, expertly rolled\";\n\n    const date = document.createElement(\"p\");\n    date.textContent = \"Established in 2023\";\n\n    const img = document.createElement(\"img\");\n    img.src = \"assets/home-sushi.jpg\";\n    img.alt = \"Sushi\";\n\n    const orderMsg = document.createElement(\"p\");\n    orderMsg.textContent = \"Order online or visit us!\"\n\n    mainEl.append(slogan, date, img, orderMsg)\n    container.appendChild(mainEl);\n}\n\nfunction setAsMenu() {\n    addElementToMain(\"dragon-roll.jpg\", \"Dragon Roll Sushi\", \"Dragon Roll Sushi\", \"Panko prawn and cucumber roll with grilled eel top and Teriyaki, sweet spicy sauce and ginger.\");\n    addElementToMain(\"cucumb-avacado-maki.jpg\", \"Cucumber Avacado Maki\", \"Cucumber Avacado Maki\", \"Sushi roll with avocado cucumber and sesame.\")\n}\n\nfunction addElementToMain(imgSrc, imgAlt, productName, productDescription) {\n    const mainEl = document.querySelector(\"main\");\n    const productContainer = document.createElement(\"div\");\n    productContainer.classList.add(\"product\");\n\n    const productImgEl = document.createElement(\"img\");\n    const productNameEl = document.createElement(\"p\");\n    const productDescEl = document.createElement(\"p\");\n    productDescEl.classList.add(\"small\");\n\n    productImgEl.src = `assets/${imgSrc}`;\n    productImgEl.alt = imgAlt;\n\n    productNameEl.textContent = productName;\n    productDescEl.textContent = productDescription;\n\n    productContainer.append(productImgEl, productNameEl, productDescEl);\n    mainEl.appendChild(productContainer);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createBody\": () => (/* binding */ createBody)\n/* harmony export */ });\n/* harmony import */ var _content_home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content/home.js */ \"./src/content/home.js\");\n/* harmony import */ var _content_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./content/menu.js */ \"./src/content/menu.js\");\n\n\n\nfunction createBody() {\n    const container = document.getElementById(\"content\");\n    const mainEl = document.createElement(\"main\");\n    container.appendChild(mainEl);\n    (0,_content_menu_js__WEBPACK_IMPORTED_MODULE_1__.setAsMenu)();\n}\n\n//# sourceURL=webpack://restaurant-page/./src/main.js?");
 
 /***/ })
 
