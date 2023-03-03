@@ -26,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _heading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./heading.js */ \"./src/heading.js\");\n\n\nlet currentHeading = \"Home\"\n;(0,_heading_js__WEBPACK_IMPORTED_MODULE_0__.createHeading)(currentHeading)\n\nconst navBarButtons = document.querySelectorAll(\".nav-button\")\nnavBarButtons.forEach(button => button.addEventListener('click', () => {\n    ;(0,_heading_js__WEBPACK_IMPORTED_MODULE_0__.changeHeading)(button.textContent);\n    currentHeading = button.textContent;\n}))\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _heading_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./heading.js */ \"./src/heading.js\");\n/* harmony import */ var _main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.js */ \"./src/main.js\");\n\n\n\nlet currentHeading = \"Home\"\n;(0,_heading_js__WEBPACK_IMPORTED_MODULE_0__.createHeading)(currentHeading)\n;(0,_main_js__WEBPACK_IMPORTED_MODULE_1__.createBody)()\n\nconst navBarButtons = document.querySelectorAll(\".nav-button\")\nnavBarButtons.forEach(button => button.addEventListener('click', () => {\n    ;(0,_heading_js__WEBPACK_IMPORTED_MODULE_0__.changeHeading)(button.textContent);\n    currentHeading = button.textContent;\n}))\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/main.js":
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createBody\": () => (/* binding */ createBody)\n/* harmony export */ });\n// import Sushi from './home-sushi.jpg'\n\nfunction createBody() {\n    const container = document.getElementById(\"content\");\n    const mainEl = document.createElement(\"main\");\n    container.appendChild(mainEl);\n    setAsHome();\n}\n\nfunction setAsHome() {    \n    const mainEl = document.querySelector(\"main\");\n    const slogan = document.createElement(\"p\");\n    slogan.textContent = \"Fresh fish, expertly rolled\";\n\n    const date = document.createElement(\"p\");\n    date.textContent = \"Established in 2023\";\n\n    const img = document.createElement(\"img\");\n    img.src = \"assets/home-sushi.jpg\";\n    img.alt = \"Sushi\";\n\n    const orderMsg = document.createElement(\"p\");\n    orderMsg.textContent = \"Order online or visit us!\"\n\n    mainEl.append(slogan, date, img, orderMsg)\n    container.appendChild(mainEl);\n}\n\n//# sourceURL=webpack://restaurant-page/./src/main.js?");
 
 /***/ })
 
