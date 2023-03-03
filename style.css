@@ -10,6 +10,7 @@
 
 html, body, #content {
     height: 100%;
+    background-color: #30323D;
 }
 
 #content {
@@ -59,7 +60,7 @@ button#selected {
     margin: 2rem 20rem;
 }
 
-main > .home-container {
+main > .home-container, main > .contact {
     padding: 3rem 2rem;
 }
 
@@ -112,4 +113,12 @@ main > .home-container {
     .products-container {
         grid-template-columns: 1fr;
     }
+}
+
+.contact > img {
+    max-width: 100%;
+}
+
+.contact > p {
+    margin-bottom: 1rem;
 }
